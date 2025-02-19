@@ -8,9 +8,28 @@ public class Main
     Scanner sc = new Scanner(System.in);
     String input = "";
 
+    ArrayList<String> words = new ArrayList<String>();
+
+    System.out.println("Please enter words, enter STOP tp stop the loop");
     while (!input.equals("STOP"))
     {
-      System.out.println("infinite loop! replace with your code");
+      System.out.println("In the loop, please enter word:");
+      input = sc.nextLine();
+      words.add(input);
+      System.out.println("The ArrayList is now " + words);
     }
+    System.out.println("Removing the last word");
+    int lastIndex = words.size()-1;
+    words.remove(lastIndex);
+
+    System.out.println("Remove the last word. Arraylist is now " + words);
+
+    String fristWord = words.get(0);
+    words.set(words.size()-1, fristWord); //set is how you replace
+    words.remove(fristWord);
+
+
+    System.out.println("Replacing the last word with the frist word " + words);
+
   }
 }
