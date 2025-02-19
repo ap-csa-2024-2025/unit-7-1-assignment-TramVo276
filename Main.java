@@ -26,10 +26,14 @@ public class Main
 
     String fristWord = words.get(0);
     words.set(words.size()-1, fristWord); //set is how you replace
-    words.remove(fristWord);
-
-
+  
     System.out.println("Replacing the last word with the frist word " + words);
+
+    if (words.size() > 2)
+    {
+      words.remove(fristWord);
+      System.out.println("Frist element has been removed " + words);
+    }
 
   }
 }
